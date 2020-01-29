@@ -1,0 +1,22 @@
+start: s0
+error: "invalid input, try again:\n"
+
+scene s0 {
+  "game one\n"
+  "which position do you play?\n"
+  "a: Outside and middle\n"
+  "c: I am a strong player"
+  "c" -> s1
+  "d: I love playing volleyball\n"
+  "e: I can play any postition except setter\n"
+  "b: I am a strong player\n"
+  "b"-> s2
+}
+
+scene s1 {
+  "we are in finals!\n"
+} end
+
+scene s2 {
+  "we won the finals and I brought a t-shirt home!!\n"
+} end

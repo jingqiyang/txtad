@@ -1,0 +1,17 @@
+start: s0
+
+scene s0 {
+  "you see a giant sword in a stone\n"
+  "what do you do?\n"
+  "a: pick up the sword\n"
+  "a" -> s3
+  "b: walk away\n"
+}
+
+scene s1 {
+  "you are the legendary king arthur\n"
+}
+
+scene s2 {
+  "you continue your life as normal\n"
+} end

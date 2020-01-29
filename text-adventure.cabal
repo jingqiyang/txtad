@@ -1,0 +1,80 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 27163fbf04f791d8ae89e2ef5937afdba6818ccf935c486e1554a9a2129855d4
+
+name:           text-adventure
+version:        0.1.0.0
+description:    Please see the README on GitHub
+homepage:       https://github.com/#readme
+bug-reports:    https://github.com//issues
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/
+
+library
+  exposed-modules:
+      TxtAd.CodeGen
+      TxtAd.Parser
+      TxtAd.Quote
+      TxtAd.Syntax
+  other-modules:
+      Paths_text_adventure
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , haskeline
+    , parsec
+    , template-haskell
+    , th-lift
+    , th-lift-instances
+  default-language: Haskell2010
+
+executable text-adventure
+  main-is: Main.hs
+  other-modules:
+      Paths_text_adventure
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -ddump-splices -ddump-to-file
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , haskeline
+    , parsec
+    , template-haskell
+    , text-adventure
+    , th-lift
+    , th-lift-instances
+  default-language: Haskell2010
+
+test-suite text-adventure-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_text_adventure
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , haskeline
+    , parsec
+    , template-haskell
+    , text-adventure
+    , th-lift
+    , th-lift-instances
+  default-language: Haskell2010

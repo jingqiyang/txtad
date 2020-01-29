@@ -1,0 +1,15 @@
+start: s0
+error: "incorrect, try again:\n"
+
+scene s0 {
+  "which is the prettiest beech tree?\n"
+  "a: the american beech, Fagus grandifolia\n"
+  "b: the european beech, Fagus sylvatica\n"
+  "b" -> s1
+  "c: the copper beech, Fagus sylvatica f. pururea\n"
+}
+
+scene s1 {
+  "ding ding ding! the most beautiful big soft leaves\n"
+  "of any beech tree in the world. congrats!\n"
+} end

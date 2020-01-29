@@ -1,0 +1,21 @@
+start: dragon
+
+scene dragon {
+  "a giant dragon is blocking your path\n"
+  "what do you do?\n"
+  "a: run in and attack it with my sword\n"
+  "a" -> death
+  "b: sneak around the dragon to steal its egg\n"
+  "b" -> death
+}
+
+scene death {
+  "the dragon noticed you immediately and squashed you like a bug!\n"
+  "play again? (y/n)\n"
+  "y" -> dragon
+  "n" -> done
+}
+
+scene done {
+    "the end.\n"
+} end

@@ -1,0 +1,19 @@
+start: s0
+error: "invalid input, try again:\n"
+
+scene s0 {
+  "you see a giant sword in a stone\n"
+  "what do you do?\n"
+  "a: pick up the sword\n"
+  "a" -> s1
+  "b: walk away\n"
+  "b" -> s2
+}
+
+scene s1 {
+  "congrats, you are the legendary king arthur!\n"
+} end
+
+scene s2 {
+  "you continue your life as normal\n"
+} end
